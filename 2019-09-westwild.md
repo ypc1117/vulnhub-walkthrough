@@ -15,7 +15,7 @@ We use the tools called netdiscover scan hosts, we found the 192.168.0.106 is ou
 <img src="images/Screen Shot 2019-09-16 at 9.59.36 PM.png" alt="Screen Shot 2019-09-16 at 9.59.36 PM" style="zoom:100%;" />
 
 
-We found some services <u>SSH</u>, <u>HTTP</u>, <u>SMB</u>, <u>MYSQL</u> 
+We found some services <u>SSH</u>, <u>HTTP</u>, <u>SMB</u>
 
 ------
 
