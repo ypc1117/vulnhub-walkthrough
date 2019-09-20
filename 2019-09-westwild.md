@@ -4,7 +4,7 @@
 
 ![discover](images/westwild/discover.png)
 
-We use the tools called netdiscover scan hosts, we found the 192.168.0.106 is our target virtualbox host ip.
+We use the tools called netdiscover scan hosts, we found the 192.168.0.107 is our target virtualbox host ip.
 
 ------
 
