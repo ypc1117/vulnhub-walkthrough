@@ -48,7 +48,7 @@ Here are 5-ways to got  root  privilege of the machine.
 
 ------
 
-### Solution 1
+### Solution 1(File Upload)
 
 ![p0](images/hardy/p0.png)
 
@@ -63,6 +63,10 @@ We use metasploit `exploit/unix/webapp/wp_reflexgallery_file_upload ` to get she
 We could get the www-data user, so we should escalate our privilege to root.
 
 ![find](images/hardy/find.png)
+
+flag1.txt found in /home/raj
+
+![flag1](images/hardy/flag1.png)
 
 Let's find thers which owns suid permissions file. So we find ***cp*** and ***wget*** has suid permission.
 
@@ -90,7 +94,7 @@ Successfully!!!
 
 ------
 
-### Solution 2
+### Solution 2(LFI & CSRF)
 
 ![p0](images/hardy/p1.png)
 
@@ -116,7 +120,53 @@ We found a Base64 encoded strings, and decode ==> found **aarti: aarti@gmail.com
 
 After tried login in http://192.168.0.107/wp-admin/ failed, I was sure that the  aarti@gmail.com is the detail of  the user aarti.
 
+![exploit3](images/hardy/exploit3.png)
 
+We didn't own the user's passwd, so we should see wether something can escalate privlege, Maybe the wp-support can make a effect.
+
+![search](images/hardy/search.png)
+
+![exploit2](images/hardy/exploit2.png)
+
+![poc2](images/hardy/poc2.png)
+
+Luckily, the exploit could bypass login.
+
+<img src="images/hardy/poc_html.png" alt="poc_html" style="zoom:100%;" />
+
+
+
+![aarti_success_png](images/hardy/aarti_success_png.png)
+
+Gratefully, aarti logan successfully!!!.
+
+![flag2](images/hardy/flag2.png)
+
+We found the second flag.
+
+![passwd](images/hardy/passwd.png)
+
+We found the admin password **Ignite@123**
+
+Now we should look somewhere to reverse our shell to get www-data user.
+
+![admin_login](images/hardy/admin_login.png)
+
+![template](images/hardy/template.png)
+
+Then we got www-data.  www-data to root was the same as solution1.
+
+Successfully!!!
+
+------
+
+### Solution 3(Authorized File Upload)
+
+![p3](images/hardy/p3.png)
+
+We use metasploit `exploit/unix/webapp/wp_slideshowgallery_upload`
+
+![exploit4](images/hardy/exploit4.png)
 
 Successfully!!!
 
