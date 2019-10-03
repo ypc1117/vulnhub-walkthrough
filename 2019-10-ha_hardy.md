@@ -44,7 +44,7 @@ We found wordpress users: **amin, aarti**, but sadly, i couldn't brute force the
 
 So we needed to scan wordpress plugin exploit and We found some interesting file. 
 
-Here are 5-ways to got  root  privilege of the machine.
+Here are 4-ways to got  root  privilege of the machine.
 
 ------
 
@@ -167,6 +167,34 @@ Successfully!!!
 We use metasploit `exploit/unix/webapp/wp_slideshowgallery_upload`
 
 ![exploit4](images/hardy/exploit4.png)
+
+Successfully!!!
+
+------
+
+### Solution 4（SQL Injection）
+
+Above the Picture, we have zip to do.
+
+`dirb http://192.168.0.107 -X .zip`
+
+![zip](images/hardy/zip.png)
+
+We tried unzip this zip file, but needs password.
+
+![p4](images/hardy/p4.png)
+
+![p5](images/hardy/p5.png)
+
+We could use Sympossium to retrieving all the database content.
+
+![hashes](images/hardy/hashes.png)
+
+At first, i use john to brute force the two password, but failed.
+
+May one of the two passhashes is the password of zip.![link](images/hardy/link.png)
+
+We could do it according to this exploits.
 
 Successfully!!!
 
