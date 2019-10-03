@@ -198,6 +198,8 @@ We could do it according to this exploits.
 
 Successfully!!!
 
+This is a awesome machine. Thanks for the Author.
+
 ------
 
 **That' all , Thanks for your watching**
